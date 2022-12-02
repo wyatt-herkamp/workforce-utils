@@ -12,47 +12,47 @@ pub struct Schedule {
     duration: i64,
     #[serde(rename = "payableDuration")]
     payable_duration: i64,
-    days: HashMap<String, Day>,
+    pub days: HashMap<String, Day>,
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
 pub struct Day {
-    start: Time,
-    end: Time,
-    duration: i64,
+    pub start: Time,
+    pub end: Time,
+    pub duration: i64,
     #[serde(rename = "payableDuration")]
-    payable_duration: i64,
-    shifts: HashMap<String, Shift>,
+    pub payable_duration: i64,
+    pub shifts: HashMap<String, Shift>,
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
 pub struct Shift {
     #[serde(rename = "shiftId")]
-    shift_id: String,
-    start: Time,
-    end: Time,
-    duration: i64,
+    pub shift_id: String,
+    pub start: Time,
+    pub end: Time,
+    pub duration: i64,
     #[serde(rename = "payableDuration")]
-    payable_duration: i64,
-    segments: Vec<Segment>,
-    published: bool,
+    pub payable_duration: i64,
+    pub segments: Vec<Segment>,
+    pub  published: bool,
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
 pub struct Segment {
     #[serde(rename = "shiftId")]
-    shift_id: String,
-    start: Time,
-    end: Time,
+    pub shift_id: String,
+    pub start: Time,
+    pub end: Time,
     duration: i64,
     #[serde(rename = "payableDuration")]
     payable_duration: i64,
     #[serde(default)]
-    department: String,
+    pub department: String,
     #[serde(rename = "type")]
-    segment_type: Type,
+    pub segment_type: Type,
     published: bool,
-    location: String,
+    pub location: String,
     payable: bool,
     details: Option<String>,
 }

@@ -4,3 +4,4 @@ tmp
 *.json
 Cargo.lock
 .idea
+*.txt

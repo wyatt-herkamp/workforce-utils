@@ -19,3 +19,5 @@ simple-log = "1.6.0"
 name = "schedule_converter"
 [[bin]]
 name = "schedule_stealer"
+[[bin]]
+name = "share_text"
