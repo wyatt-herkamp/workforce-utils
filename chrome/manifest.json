@@ -1,0 +1,22 @@
+{
+  "name": "Workforce Utils",
+  "version": "1.0.0",
+  "description": "Workforce Utils",
+  "manifest_version": 3,
+  "author": "Wyatt Herkamp",
+  "permissions": [
+    "webRequest",
+    "tabs",
+    "declarativeNetRequest",
+    "downloads",
+    "storage"
+  ],
+  "host_permissions": ["https://wft.homedepot.com/*"],
+  "action": {
+    "default_title": "Workforce Downloader",
+    "default_popup": "download.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

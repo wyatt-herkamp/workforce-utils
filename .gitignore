@@ -1,7 +1,6 @@
 target
 tmp
 *.ics
-*.json
 Cargo.lock
 .idea
 *.txt
