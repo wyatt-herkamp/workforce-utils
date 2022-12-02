@@ -1,7 +1,7 @@
 use clap::Parser;
-use schedule_stealer::build_calander::build;
-use schedule_stealer::Schedule;
 use std::path::PathBuf;
+use workforce_rs::build_calander::build;
+use workforce_rs::Schedule;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]

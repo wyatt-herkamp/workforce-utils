@@ -1,23 +1,2 @@
-[package]
-name = "schedule_stealer"
-version = "0.1.0"
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
-clap = { version = "4", features = ["derive"] }
-serde = { version = "1", features = ["derive"] }
-serde_json = "1"
-chrono = { version = "0.4", features = ["serde"] }
-anyhow = "1"
-ics = "0.5"
-uuid = "1"
-log = "0.4"
-simple-log = "1.6.0"
-[[bin]]
-name = "schedule_converter"
-[[bin]]
-name = "schedule_stealer"
-[[bin]]
-name = "share_text"
+[workspace]
+members = ["workforce-rs", "workforce-cli"]

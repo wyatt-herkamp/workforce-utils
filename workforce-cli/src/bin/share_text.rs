@@ -1,8 +1,9 @@
 use clap::Parser;
 use log::warn;
-use schedule_stealer::Schedule;
 use std::io::Write;
 use std::path::PathBuf;
+use workforce_rs::Schedule;
+
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
 pub struct Convert {
