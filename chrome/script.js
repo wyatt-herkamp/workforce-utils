@@ -1,34 +1,28 @@
-document.getElementById("download").addEventListener("click", download);
+document.getElementById("downloadSchedule").addEventListener("click", downloadSchedule);
 var schedule = "";
 
-function download() {
-  if (schedule == "") {
+function downloadSchedule() {
+  if (schedule === "") {
     const sending = chrome.runtime.sendMessage({
       action: "getSchedule",
     });
     sending.then(
       (response) => {
         schedule = response.schedule;
-        innerDownload();
+        innerDownloadSchedule();
       },
       (error) => {
         console.log(`Error: ${error}`);
       }
     );
   } else {
-    innerDownload();
+    innerDownloadSchedule();
   }
 }
-function innerDownload() {
+function innerDownloadSchedule() {
   console.log("Downloading: " + schedule);
   chrome.downloads.download({
     url: schedule,
     filename: "schedule.json", // Optional
   });
 }
-
-chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
-  if (msg.action == "open_dialog_box") {
-    alert("Message recieved!");
-  }
-});

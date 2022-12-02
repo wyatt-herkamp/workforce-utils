@@ -35,7 +35,7 @@ pub struct Shift {
     #[serde(rename = "payableDuration")]
     pub payable_duration: i64,
     pub segments: Vec<Segment>,
-    pub  published: bool,
+    pub published: bool,
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
